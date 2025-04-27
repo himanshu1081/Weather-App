@@ -4,6 +4,10 @@ import './App.css'
 import Partly_cloudy from './assets/Partly cloudy.png';
 import Sunny from './assets/Sunny.png';
 import Haze from './assets/Haze.png';
+import Rain from './assets/Rain.png';
+import Snow from './assets/Snow.png';
+import Thunderstrom from './assets/Thunderstrom.png';
+import Clouds from './assets/Cloudy.png'
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 
@@ -24,16 +28,6 @@ function App() {
     setCity(event.target.value);
   }
 
-  function handleImage(text){
-    if(text==='Sunny'){
-      setImage(Sunny);
-    }else if(text==='Clouds'){
-      setImage(Partly_cloudy);
-    }else if(text==='Haze'){
-      setImage(Haze);
-    }
-  }
-
 
   async function getWeather(city){
     const response=await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=76b114c22b4ff11dd3e95377b809082a&units=metric`);
@@ -44,7 +38,18 @@ function App() {
     setCondition(weather.main);
     setHumidity(mainData.humidity);
     setFeelsLike(mainData.feels_like);
-    handleImage(weather.main);
+
+    const weatherImage ={
+      Sunny:Sunny,
+      Haze:Haze,
+      "Partly Cloudy":Partly_cloudy,
+      Thunderstrom:Thunderstrom,
+      Rain:Rain,
+      Snow:Snow,
+      "Clear":Sunny,
+      Clouds:Clouds
+    } 
+    setImage(weatherImage[weather.main]||Sunny);
 
     console.log(data);
   }
