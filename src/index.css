@@ -1,0 +1,5 @@
+body {
+    background-image:url("D:/VSCode/Web Dev/React/Weather-App/src/assets/bg.jpg");
+    background-size: 100%;
+    overflow: hidden;
+}

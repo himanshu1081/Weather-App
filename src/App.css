@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Cal Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.title {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 5px;
+  background-color: rgb(42, 33, 33);
+  border-radius: 10px;
+}
+
+
+.main-box {
+  height: 85vh;
+  width: 60vh;
+  background-color: rgb(255, 255, 255);
+  border-radius: 25px;
+}
+
+.main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.value-temperature {
+  font-size: 60px;
+  text-align: center;
+}
+
+.temp-img {
+  height: 280px;
+  width: 280px;
+  display: block;
+  align-content: center;
+  animation: float 3s ease infinite;
+}
+
+@keyframes float{
+  0%{
+    transform: translateY(0px);
+  }
+  50%{
+    transform: translateY(10px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+}
+
+.temp-img-container {
+  display: flex;
+  justify-content: center;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.value-weather {
+  text-align: center;
+  font-size: 35px;
+}
+
+
+
+.city {
+  border-radius: 5px;
+  background-color: rgb(218, 210, 210);
+  margin-top: 10px;
+  border: 3px solid transparent;
+  transition: border 500ms;
+  font-size: 4vh;
+}
+
+.city:hover {
+  border: 3px solid black;
+}
+.search-icon-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(218, 210, 210);
+  margin-left: 8px;
+  margin-top: 8px;
+  border-radius: 25px;
+  height: 3em;
+  width: 3em;
+  border: 3px solid transparent;
+  transition: border 500ms;
+}
+
+.fa-search {
+  font-size: 30px;
+  border: 0;
+  background-color: rgb(218, 210, 210);
+}
+
+.search-icon-container:hover {
+  border: 3px solid black;
+}
+
+.other-info-container{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  
+}
+.other-info{
+  margin: 0px 40px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Cal Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  border-radius: 5px;
+  box-shadow:2px 2px 5px black;
+  height: 15vh;
+  width: 25vh;
+}
