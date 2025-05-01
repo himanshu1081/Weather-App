@@ -19,7 +19,6 @@ function App() {
   const [image,setImage]=useState(Partly_cloudy);
   const[city,setCity]=useState("Agra");
   const[condition,setCondition]=useState("Sunny");
-  const[description,setDescription]=useState("Today is Sunny Day.");
   const[temperature,setTemperature]=useState(26);
   const[feelsLike,setFeelsLike]=useState(29.68);
   const[humidity,setHumidity]=useState(16);
@@ -67,8 +66,10 @@ function App() {
           <div className='temp-img-container'>
           <img src={image} className="temp-img" alt='temperature-image'/>
           </div>
-          <p className='value-temperature'>{temperature.toFixed(1)}°C</p>
-          <p className='value-weather'>{condition}</p>
+          <div className='main-info-container'>
+          <p className='value temperature'>{temperature.toFixed(1)}°C</p>
+          <p className='value weather'>{condition}</p>
+          </div>
           <div className='other-info-container'>
             <p className='other-info feels-like'>Feels Like<br/>{feelsLike.toFixed(1)}°C</p>
             <p className='other-info humidity'>Humidity<br/>{humidity}</p>
