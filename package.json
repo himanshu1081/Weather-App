@@ -2,12 +2,12 @@
   "name": "weather-app",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "homepage": "https://himanshu1081.github.io/Weather-App",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "predeploy": "vite build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "lint": "eslint .",
     "preview": "vite preview"
